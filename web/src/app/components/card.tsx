@@ -6,10 +6,13 @@ import { Reveal } from '../utils/reveal'
 
 export default function Card({ data }: IAppProps) {
   return (
-    <div className="flex w-screen flex-row flex-wrap items-center justify-center gap-10 pt-12">
+    <section
+      id="cards-container"
+      className="flex w-screen flex-row flex-wrap items-center justify-center gap-10 pt-12"
+    >
       {data?.map(({ name, level, img, _id }) => (
         <Reveal key={_id} width={'feat-content'}>
-          <div className="rounded-2x relative flex h-[450px] w-[260px] transform flex-col items-center justify-evenly gap-y-4 overflow-hidden rounded-lg border-newOrange-500 bg-newblue-900 transition-transform duration-300 hover:scale-105 md:w-[300px]">
+          <div className="card rounded-2x relative flex h-[450px] w-[260px] transform flex-col items-center justify-evenly gap-y-4 overflow-hidden rounded-lg border-newOrange-500 bg-newblue-900 transition-transform duration-300 hover:scale-105 md:w-[300px]">
             <h1 className="bold relative z-10 w-full px-3 text-center text-xl font-bold text-newYellow-500 md:text-2xl">
               {name}
             </h1>
@@ -31,6 +34,6 @@ export default function Card({ data }: IAppProps) {
           </div>
         </Reveal>
       ))}
-    </div>
+    </section>
   )
 }

@@ -24,6 +24,7 @@ export default function UpButton() {
 
   return (
     <div
+      id="up-button"
       data-visible={visible}
       className="fixed bottom-2 right-2 z-10 scale-0 rounded-full bg-newblue-950 transition-transform duration-150 data-[visible=true]:scale-100"
     >

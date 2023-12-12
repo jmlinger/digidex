@@ -55,7 +55,10 @@ export default function Pagination(props: PaginationProps) {
   )
 
   return (
-    <div className="flex flex-col items-center gap-5 sm:gap-10 md:flex-row">
+    <section
+      id="pagination"
+      className="flex flex-col items-center gap-5 sm:gap-10 md:flex-row"
+    >
       <div className="grid grid-cols-2 grid-rows-2 items-center justify-center gap-5 sm:flex sm:flex-row">
         <Button
           disabled={page === 1}
@@ -81,6 +84,7 @@ export default function Pagination(props: PaginationProps) {
                 >
                   {pageNumber === 5 ? (
                     <select
+                      id="pageSelector"
                       onChange={(e) => handlePageSelectChange(e)}
                       defaultValue=""
                       data-page={page >= 5 && page < numberOfPages}
@@ -106,7 +110,7 @@ export default function Pagination(props: PaginationProps) {
                     <button
                       key={pageNumber}
                       data-page={pageNumber === page}
-                      className="text-newYellow-500 hover:text-lg hover:font-extrabold hover:text-newOrange-500 data-[page=true]:text-base data-[page=true]:font-extrabold data-[page=true]:text-newOrange-500 sm:data-[page=true]:text-lg"
+                      className="pages text-newYellow-500 hover:text-lg hover:font-extrabold hover:text-newOrange-500 data-[page=true]:text-base data-[page=true]:font-extrabold data-[page=true]:text-newOrange-500 sm:data-[page=true]:text-lg"
                       onClick={() => togglePage(pageNumber)}
                     >
                       {pageNumber}
@@ -124,7 +128,7 @@ export default function Pagination(props: PaginationProps) {
               >
                 <button
                   data-page={pageNumber === page}
-                  className="text-newYellow-500 hover:text-lg hover:font-extrabold hover:text-newOrange-500 data-[page=true]:text-lg data-[page=true]:font-extrabold data-[page=true]:text-newOrange-500"
+                  className="pages text-newYellow-500 hover:text-lg hover:font-extrabold hover:text-newOrange-500 data-[page=true]:text-lg data-[page=true]:font-extrabold data-[page=true]:text-newOrange-500"
                   onClick={() => togglePage(pageNumber)}
                 >
                   {pageNumber}
@@ -154,6 +158,7 @@ export default function Pagination(props: PaginationProps) {
       >
         Digimons per page:
         <select
+          id="elements-per-page"
           onChange={(e) => handleElementsPerPageChange(e)}
           defaultValue={elementsPerPage}
           className="cursor-pointer rounded-lg border-2 border-newOrange-500 bg-newblue-950 text-center text-newYellow-500 focus:bg-newblue-950 focus:outline-none"
@@ -165,6 +170,6 @@ export default function Pagination(props: PaginationProps) {
           ))}
         </select>
       </label>
-    </div>
+    </section>
   )
 }

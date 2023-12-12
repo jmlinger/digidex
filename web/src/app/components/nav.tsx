@@ -36,7 +36,7 @@ export default function Nav() {
   }
 
   return (
-    <div className="min-h-100 fixed top-0 z-20 flex w-full cursor-pointer flex-wrap items-center justify-evenly bg-newblue-950 px-1 py-3 text-sm shadow-md sm:flex-nowrap sm:px-3 sm:text-lg lg:px-10">
+    <nav className="min-h-100 fixed top-0 z-20 flex w-full cursor-pointer flex-wrap items-center justify-evenly bg-newblue-950 px-1 py-3 text-sm shadow-md sm:flex-nowrap sm:px-3 sm:text-lg lg:px-10">
       <div onClick={() => setGetData(!getData)}>
         <Image
           priority={true}
@@ -89,6 +89,6 @@ export default function Nav() {
           Search
         </Button>
       </form>
-    </div>
+    </nav>
   )
 }
