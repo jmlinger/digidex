@@ -1,10 +1,5 @@
-import { Document, Schema, model } from 'mongoose'
-
-export interface IDigimonDocument extends Document {
-  name: string
-  img: string
-  level: string
-}
+import { Schema, model } from 'mongoose'
+import { IDigimonDocument } from '../Interfaces/digimon'
 
 const DigimonSchema = new Schema(
   {
