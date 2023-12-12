@@ -36,7 +36,7 @@ export default function Nav() {
   }
 
   return (
-    <div className="min-h-100 fixed top-0 z-20 flex w-full cursor-pointer flex-wrap items-center justify-evenly bg-newblue-950 px-1 py-3 text-sm shadow-md sm:px-3 sm:text-lg lg:px-10">
+    <div className="min-h-100 fixed top-0 z-20 flex w-full cursor-pointer flex-wrap items-center justify-evenly bg-newblue-950 px-1 py-3 text-sm shadow-md sm:flex-nowrap sm:px-3 sm:text-lg lg:px-10">
       <div onClick={() => setGetData(!getData)}>
         <Image
           priority={true}
@@ -58,7 +58,7 @@ export default function Nav() {
             type="text"
             value={digimonName}
             onChange={(e) => setDigimonName(e.target.value)}
-            className="my-3 h-8 w-3/4 min-w-[190px] rounded-xl p-2 focus:outline-none sm:h-12 md:w-1/2 md:p-4 lg:w-2/3"
+            className="my-3 h-8 w-3/4 min-w-[190px] max-w-4xl rounded-xl p-2 focus:outline-none sm:h-12 md:w-1/2 md:p-4 lg:w-2/3"
           />
 
           <label
