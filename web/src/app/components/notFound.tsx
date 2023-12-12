@@ -3,7 +3,10 @@ import Image from 'next/image'
 
 export default function NotFound() {
   return (
-    <div className="absolute left-1/2 top-[50%] flex -translate-x-1/2 -translate-y-1/2 flex-wrap items-center justify-center">
+    <div
+      id="not-found"
+      className="absolute left-1/2 top-[50%] flex -translate-x-1/2 -translate-y-1/2 flex-wrap items-center justify-center"
+    >
       <Image
         src={agumon}
         alt="image"
