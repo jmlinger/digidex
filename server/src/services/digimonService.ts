@@ -1,33 +1,29 @@
-import Digimon, { IDigimonDocument } from '../models/digimonModel'
 import { z } from 'zod'
 
-interface IDigimonQueryParams {
-  name?: string
-  level?: string
-}
+import Digimon from '../models/digimonModel'
+import { IDigimonDocument, IDigimonQueryParams } from '../Interfaces/digimon'
 
 export async function getDigimons(
   queryParams: IDigimonQueryParams,
 ): Promise<IDigimonDocument[]> {
-  const digimonSchema = z.object({
-    name: z.string(),
-    level: z.string(),
-  })
+  const { name, level } = z
+    .object({
+      name: z.string(),
+      level: z.string(),
+    })
+    .parse(queryParams)
 
-  const { name, level } = digimonSchema.parse(queryParams)
+  const query: Record<string, string | RegExp> = {}
 
-  let query: Record<string, string | RegExp> = {}
+  if (name) {
+    query.name = new RegExp(name, 'i')
+  }
 
-  if (!name && !level) {
-    query = {}
-  } else if (!name) {
-    query = { level }
-  } else if (!level) {
-    query = { name: new RegExp(name, 'i') }
-  } else {
-    query = { name: new RegExp(name, 'i'), level }
+  if (level) {
+    query.level = level
   }
 
   const digimons = await Digimon.find(query)
+
   return digimons
 }
