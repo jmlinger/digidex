@@ -1,16 +1,16 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { getDigimons } from '../services/digimonService'
-import { AnyObject } from 'mongoose'
+import { IDigimonQueryParams } from '../Interfaces/digimon'
 
 export async function getDigimonHandler(
   request: FastifyRequest,
   reply: FastifyReply,
 ) {
   try {
-    const digimons = await getDigimons(request.query as AnyObject)
+    const digimons = await getDigimons(request.query as IDigimonQueryParams)
 
     if (digimons.length === 0) {
-      return reply.status(404).send({ message: 'Digimon not found!' })
+      return reply.status(200).send(null)
     }
 
     return reply.status(200).send(digimons)
