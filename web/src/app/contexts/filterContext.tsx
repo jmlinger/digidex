@@ -1,25 +1,25 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-empty-function */
-'use client'
-import { ReactNode, createContext, useState } from 'react'
+import React, { ReactNode, createContext, useState } from 'react'
+import { IDigimonFilterContext } from '../interfaces/digimon'
 
 interface ProviderProps {
   children: ReactNode
 }
 
-export const DigimonFilterContext = createContext({
+export const DigimonFilterContext = createContext<IDigimonFilterContext>({
   digimonName: '',
-  setDigimonName: (value: string) => {},
+  setDigimonName: () => {},
   digimonLevel: '',
-  setDigimonLevel: (value: string) => {},
+  setDigimonLevel: () => {},
   getData: false,
-  setGetData: (value: boolean) => {},
+  setGetData: () => {},
 })
 
 export function DigimonFilterContextProvider({ children }: ProviderProps) {
-  const [digimonName, setDigimonName] = useState('')
-  const [getData, setGetData] = useState(false)
-  const [digimonLevel, setDigimonLevel] = useState('')
+  const [digimonName, setDigimonName] = useState<string>('')
+  const [getData, setGetData] = useState<boolean>(false)
+  const [digimonLevel, setDigimonLevel] = useState<string>('')
 
   return (
     <DigimonFilterContext.Provider

@@ -1,6 +1,7 @@
+import { IDigimonFilterContext } from '../interfaces/digimon'
 import { api } from '../services/api'
 
-export async function getDigimons(context: any) {
+export async function getDigimons(context: IDigimonFilterContext) {
   const { digimonLevel, digimonName, setDigimonName, setDigimonLevel } = context
 
   if (digimonName || digimonLevel) {

@@ -11,6 +11,8 @@ import { extractLevels } from '../utils/extractLevels'
 export default function Nav() {
   const [allDigimonLevels, setAllDigimonLevels] = useState<string[]>([])
 
+  const context = useContext(DigimonFilterContext)
+
   const {
     digimonName,
     setDigimonName,
@@ -18,10 +20,10 @@ export default function Nav() {
     setDigimonLevel,
     setGetData,
     getData,
-  } = useContext(DigimonFilterContext)
+  } = context
 
   useEffect(() => {
-    getDigimons(DigimonFilterContext).then((digimons) => {
+    getDigimons(context).then((digimons) => {
       setAllDigimonLevels(extractLevels(digimons))
     })
 
