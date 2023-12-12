@@ -1,3 +1,4 @@
+'use client'
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-empty-function */
 import React, { ReactNode, createContext, useState } from 'react'
