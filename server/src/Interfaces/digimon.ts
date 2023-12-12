@@ -14,3 +14,10 @@ export interface IDigimon {
   img: string
   level: string
 }
+
+export interface IDigimonReturn {
+  _id: string
+  name: string
+  img: string
+  level: string
+}
