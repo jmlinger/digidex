@@ -120,6 +120,8 @@ Login Route (/digimon):
 
 Home Page (/):
 - [x] Search Digimon.
+- [x] Pagination.
+- [x] Up button.
 
 <br>
 
