@@ -33,14 +33,26 @@ A responsive full stack digimon search application built on Next.js and Node.js.
     <a href="https://www.mongodb.com/docs/">
     <img src="https://img.shields.io/badge/mongodb-339933?style=for-the-badge&logo=mongodb&color=black" />
   </a>
+  </a>
+    <a href="https://www.mongodb.com/docs/">
+    <img src="https://img.shields.io/badge/jest-339933?style=for-the-badge&logo=jest&color=black" />
+  </a>
+  </a>
+    <a href="https://www.mongodb.com/docs/">
+    <img src="https://img.shields.io/badge/cypress-339933?style=for-the-badge&logo=cypress&color=black" />
+  </a>	
 </div>
 <br>
 
 # Instructions
 
-You can search for Digimon by name and/or level. The search button will not be accessible until you type something into the search bar or choose a level.
+You can search for Digimon by name and/or level. 
 
-You can browse the pages and choose how many Digimon you want per page.
+The search button will not be accessible until you type something into the search bar or choose a level.
+
+After a search you can also get all the digimons again by clicking the digimon logo.
+
+You can browse the pages and choose how many digimon you want per page.
 
 If you scroll too far down, you can quickly go back to the top by clicking the button that appears in the bottom right corner.
 
@@ -99,6 +111,24 @@ $ npm run start
 
 <br>
 
+# Tests
+### Running on Server
+
+```bash
+$ npm run test
+```
+
+### Running on Web
+
+```bash
+$ npm run dev
+$ npm run cypress:run
+Or
+$ npm run cypress:open
+```
+
+<br>
+
 ## Server Application Funcionalities
 
 <div align=right>
@@ -107,7 +137,7 @@ $ npm run start
 </div>
 
 Login Route (/digimon):
-- [x] GET.
+- [x] GET - all, by name and/or by level.
 
 <br>
       
