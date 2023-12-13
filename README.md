@@ -79,7 +79,7 @@ Access the app on Vercel clicking <a href="https://digidex.vercel.app/">here<a/>
 # Install dependencies
 $ npm install
 
-## Creates env file
+## Create env file
 
 - DATABASE_URL=mongodb://USER:PASSWORD@HOST:PORT/DATABASE
 - PORT="set a api port" (optional)
@@ -100,7 +100,7 @@ $ npm run start
 # Install dependencies
 $ npm install
 
-## Creates env.local file
+## Create env.local file
 - NEXT_PUBLIC_API_URL: http://localhost:3333
 	
 # Run the application
