@@ -59,7 +59,7 @@ If you scroll too far down, you can quickly go back to the top by clicking the b
 
 <br>
 
-*IMPORTANT: Digimons may take a while to appear if you are on the deployed app. Just wait a litte!
+*IMPORTANT: Digimons may take a while to appear if you are on the deployed app. Just wait a little!
 
 This could happen because the server that the api is hosted disables it when its inactive for a few time.
 
